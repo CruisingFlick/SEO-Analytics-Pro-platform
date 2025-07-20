@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard | SEO Analytics Pro</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss @2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">SEO Analytics Pro</h1>
+    <div>
+      <a href="upgrade.html" class="text-blue-600 hover:underline mr-4">Upgrade Plan</a>
+      <button onclick="alert('Logged out!')" class="text-gray-600 hover:text-gray-900">Logout</button>
+    </div>
+  </header>
+
+  <main class="p-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white p-4 rounded shadow">
+        <h2 class="font-semibold text-lg mb-2">Site Health</h2>
+        <p class="text-green-500">✅ All good</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <h2 class="font-semibold text-lg mb-2">Top Keyword</h2>
+        <p class="text-blue-500">“SEO tools” - Rank #1</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <h2 class="font-semibold text-lg mb-2">Traffic Overview</h2>
+        <canvas id="trafficChart"></canvas>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <h2 class="font-semibold text-lg mb-2">AI Content Studio</h2>
+        <a href="ai-content.html" class="text-blue-600 hover:underline">Generate Content</a>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <h2 class="font-semibold text-lg mb-2">Keyword Research</h2>
+        <a href="keyword-research.html" class="text-blue-600 hover:underline">Start Research</a>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <h2 class="font-semibold text-lg mb-2">Competitor Analysis</h2>
+        <p>Coming soon</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js "></script>
+  <script>
+    new Chart(document.getElementById('trafficChart'), {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+        datasets: [{
+          label: 'Traffic',
+          data: [1200, 1900, 3000, 2500, 4000],
+          borderColor: 'rgb(59, 130, 246)',
+          tension: 0.3
+        }]
+      }
+    });
+  </script>
+</body>
+</html>

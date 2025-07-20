@@ -1,0 +1,2 @@
+// Optional interactivity
+console.log("SEO Analytics Pro Prototype Loaded");
